@@ -1,8 +1,9 @@
 import React from 'react';
 import home1 from '../img/home1.png';
 //styled
-import styled from 'styled-components';
 import {About, Description, Hide, Image} from '../styles';
+//framer motion
+import { motion } from 'framer-motion'
 
 const AboutSection = () => {
     return(
@@ -10,7 +11,7 @@ const AboutSection = () => {
         <Description>
         <div className="title">
         <Hide>
-        <h1>we work to make</h1>
+        <motion.h2 animate={{opacity: 1, transition:{duration:2}}} initial={{opacity:0}}>we work to make</motion.h2>
         </Hide>
         <Hide>
         <h2>your <span>dream

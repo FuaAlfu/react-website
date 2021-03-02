@@ -11,7 +11,7 @@ import {pageAnimation} from '../animation';
 
 const OurWork = () => {
   return (
-    <Work exit="exit" variants={pageAnimation} initial="hidden" animate="show">
+    <Work style={{background: "#fff"}} exit="exit" variants={pageAnimation} initial="hidden" animate="show">
       <Movie>
       <h2>The Athlete</h2>
       <div className="line"></div>
@@ -45,6 +45,7 @@ min-height: 100vh;
 overflow: hidden;
 padding: 5rem 10rem;
 h2{
+color: #000;
 padding: 1rem 0rem;
 }
 `;

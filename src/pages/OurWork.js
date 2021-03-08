@@ -7,14 +7,21 @@ import theracer from '../img/theracer-small.png';
 import goodtimes from '../img/goodtimes-small.png';
 //animations
 import {motion} from 'framer-motion';
-import {pageAnimation,fade,photoAnim} from '../animation';
+import {pageAnimation,fade,photoAnim,lineAnim,slider, sliderContainer} from '../animation';
 
 const OurWork = () => {
   return (
     <Work style={{background: "#fff"}} exit="exit" variants={pageAnimation} initial="hidden" animate="show">
+    {/**/}
+    <motion.div variants={sliderContainer}>
+    <Frame1 variants={slider}></Frame1>
+    <Frame2 variants={slider}></Frame2>
+    <Frame3 variants={slider}></Frame3>
+    <Frame4 variants={slider}></Frame4>
+    </motion.div>
       <Movie>
       <motion.h2 variants={fade}>The Athlete</motion.h2>
-      <motion.div className="line"></motion.div>
+      <motion.div variants={lineAnim} className="line"></motion.div>
       <Link to='/work/the-athlete'>
       <Hide>
       <motion.img variants={photoAnim} src={athlete} alt="athlete" />
@@ -23,16 +30,16 @@ const OurWork = () => {
       </Movie>
       {/*end OF movie*/} 
       <Movie>
-      <h2>The Racer</h2>
-      <div className="line"></div>
+      <motion.h2 variants={fade}>>The Racer</motion.h2>
+      <motion.div variants={lineAnim} className="line"></motion.div>
       <Link to='/work/the-racer'>
       <img src={theracer} alt="the racer" />
       </Link>
       </Movie>
       {/*end OF movie*/} 
       <Movie>
-      <h2>goodtimes</h2>
-      <div className="line"></div>
+      <motion.h2 variants={fade}>goodtimes</motion.h2>
+      <motion.div variants={lineAnim} className="line"></motion.div>
       <Link to='/work/good-times'>
       <img src={goodtimes} alt="goodtimes" />
       </Link>
@@ -68,6 +75,29 @@ img{
 
 const Hide = styled.div`
 overflow:hidden;
+`;
+
+//frame animation
+const Frame1 = styled(motion.div)`
+position: fixed;
+left: 0;
+top: 10%;
+width: 100%;
+height: 100vh;
+background: #fffebf;
+z-index: 2;
+`;
+
+const Frame2 = styled(Frame1)`
+background: #ff8efb;
+`;
+
+const Frame3 = styled(Frame1)`
+background: #8ed2ff;
+`;
+
+const Frame4 = styled(Frame1)`
+background: #8effa0;
 `;
 
 export default OurWork

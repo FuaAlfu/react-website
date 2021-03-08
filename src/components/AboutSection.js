@@ -46,6 +46,7 @@ const AboutSection = () => {
         {/**end of descriptio */}
         <Image>
             <motion.img variants={photoAnim} src={home1} alt="guy with camera"/>
+            {/*<motion.img initial="hidden" animate="show" variants={photoAnim} src={home1} alt="guy with camera"/>*/}
         </Image>
         <Wave />
         </About>

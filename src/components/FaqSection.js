@@ -1,58 +1,59 @@
 import React, {useState}  from 'react'
 import Toggle from './Toggle'
+import {AnimateSharedLayout} from 'framer-motion';
 //styled
 import styled from 'styled-components';
 import {About} from '../styles';
+
 
 const FaqSection = () => {
    // const [faqToggle,setFaqToggle] = useState(false);
         return (
             <Faq>
                 <h2>Any Questions  <span>FAQ</span></h2>
-                <Toggle>
-                <div className="question">
-                    <h4>How do I start</h4>
+                <AnimateSharedLayout>
+                <Toggle title="How do I start">
+                
+                    {/* <h4>How do I start</h4>*/}
                     <div className="answer">
                         <p>lorcdlkjcdslkjcdlkcjdsklds</p>
                         <p>lorcdlkjcdslkjcdlkcjdskldsxzkxcjkxzckxjchzxkjhzxkjhzxkj</p>
                     </div>
                     <div className="faq-line"></div>
-                </div>
+               
                 </Toggle>
                 {/*end of question*/} 
-                <Toggle>
-                <div className="question">
-                <h4>Daily schedual</h4>
+                <Toggle title="Daily schedual">
+                {/*<div className="question">*/}
+                {/* <h4>Daily schedual</h4>*/}
                 <div className="answer">
                     <p>lorcdlkjcdslkjcdlkcjdsklds</p>
                     <p>lorcdlkjcdslkjcdlkcjdskldsxzkxcjkxzckxjchzxkjhzxkjhzxkj</p>
                 </div>
-                <div className="faq-line"></div>
-            </div>
+                {/*<div className="faq-line"></div>*/}
+            {/*</div>*/}
             </Toggle>
             {/*end of question*/} 
-            <Toggle>
-            <div className="question">
-            <h4>Diffrent payment methods</h4>
+            <Toggle title="Diffrent payment methods">
+           
+            {/* <h4>Diffrent payment methods</h4>*/}
             <div className="answer">
                 <p>lorcdlkjcdslkjcdlkcjdsklds</p>
                 <p>lorcdlkjcdslkjcdlkcjdskldsxzkxcjkxzckxjchzxkjhzxkjhzxkj</p>
             </div>
-            <div className="faq-line"></div>
-        </div>
+            {/* <div className="faq-line"></div>*/}
         </Toggle>
         {/*end of question*/} 
-        <Toggle>
-        <div className="question">
-        <h4>What product do you offer</h4>
+        <Toggle title="What product do you offer">
+        {/* <h4>What product do you offer</h4>*/}
         <div className="answer">
             <p>lorcdlkjcdslkjcdlkcjdsklds</p>
             <p>lorcdlkjcdslkjcdlkcjdskldsxzkxcjkxzckxjchzxkjhzxkjhzxkj</p>
         </div>
-        <div className="faq-line"></div>
-    </div>
+        {/* <div className="faq-line"></div>*/}
     </Toggle>
     {/*end of question*/} 
+    </AnimateSharedLayout>
             </Faq>
         );
 }

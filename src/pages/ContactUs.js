@@ -16,10 +16,26 @@ const ContactUs = () => {
          </Hide>
       </Title>
       <div>
+      <Hide>
         <Social variants={titleAnim}>
           <Circle />
           <h2>Send us a message</h2>
         </Social>
+        </Hide>
+        {/*end of circle*/} 
+        <Hide>
+        <Social variants={titleAnim}>
+          <Circle />
+          <h2>Send us a message</h2>
+        </Social>
+        </Hide>
+        {/*end of circle*/} 
+        <Hide>
+        <Social variants={titleAnim}>
+          <Circle />
+          <h2>Send us a message</h2>
+        </Social>
+        </Hide>
       </div>
     </ContactStyle>
   )
